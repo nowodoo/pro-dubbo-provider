@@ -1,0 +1,1 @@
+1.need a local zk server, the address is localhost. or you can config it in dubbo-provider.xml
