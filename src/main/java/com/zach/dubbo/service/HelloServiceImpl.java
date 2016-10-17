@@ -1,4 +1,4 @@
-package com.zach.dubbo;
+package com.zach.dubbo.service;
 
 /**
  * Created by Administrator on 2016-10-16.

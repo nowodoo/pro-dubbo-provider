@@ -29,7 +29,7 @@
     <!--<dubbo:monitor protocol="registry"/>-->
 
     <!-- here we demonstrate both annotation-based and xml-based configs -->
-    <dubbo:annotation package="com.zach" />
+    <dubbo:annotation package="com.zach"/>
 
 
     <!--dubbo的协议-->
@@ -42,7 +42,7 @@
 
 
     <!-- use netty server 使用netty-->
-    <dubbo:protocol name="rest" port="8888" server="netty" iothreads="5" threads="100" contextpath="services"/>
+    <dubbo:protocol name="rest" port="8888" keepalive="true" server="netty" iothreads="5" threads="100" contextpath="services"/>
     <!-- use tjws server -->
     <!--<dubbo:protocol name="rest" port="8888" server="tjws" contextpath="services"/>-->
     <!-- use tomcat server -->
@@ -60,6 +60,7 @@
     <!--<dubbo:protocol name="webservice" port="8892"/>-->
 
 
-	<dubbo:service interface="com.zach.dubbo.HelloService" ref="helloService"  protocol="dubbo"/>
-    <bean id="helloService" class="com.zach.dubbo.HelloServiceImpl"/>
+    <bean id="helloService" class="com.zach.dubbo.service.HelloServiceImpl"/>
+	<dubbo:service interface="com.zach.dubbo.service.HelloService" ref="helloService"  protocol="dubbo"/>
+
 </beans>
